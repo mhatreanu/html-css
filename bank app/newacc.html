@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customer Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+       $('.dropdown-toggle').dropdown();
+$('#divNewNotifications li').on('click', function() {
+    $('#dropdown_title').html($(this).find('a').html());
+    });
+  </script>
+</head>
+<body class="bg-warning">
+        <form style="margin-top:50px; margin-left:300px; margin-right:300px">
+                        <h3 class="text-center text-danger" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">OPEN NEW ACCOUNT</h3>
+<div class="form-group">
+        <label for="name">Customer Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Customer Name" required>
+</div>
+<div class="form-group">
+        <label for="con">Contact No.(10 digit):</label>
+        <input type="tel" pattern="^\d{10}$" maxlength="10" required class="form-control" placeholder="Mobile No.">
+</div>
+<div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" placeholder="Email ID" required>
+</div>
+<div class="form-group"> 
+      <label for="dob">Date of Birth:</label>
+      <input type="date" class="form-control" id="dob" placeholder="Date Of Birth" required>
+</div>
+    <div class="form-group">
+        <label for="add">Address:</label>
+        <textarea class="form-control" rows="3"  id="add" placeholder="Address" required></textarea>
+    </div>
+   
+    
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-3">
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" id="b1">
+                    Select City
+            <div class="dropdown-menu" id="d">
+                    <a class="dropdown-item" >Mumbai</a>
+                    <a class="dropdown-item" >Pune</a>
+                    <a class="dropdown-item" >Delhi</a>
+                  </div>
+            </button></div>
+            <div class="col-lg-3">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                            Select State
+                    <div class="dropdown-menu">
+                            <a class="dropdown-item" >Maharashtra</a>
+                            <a class="dropdown-item" >Tamilnadu</a>
+                            <a class="dropdown-item" >Gujrat</a>
+                          </div>
+                    </button>   
+                </div>
+            <div class="col-lg-3">
+                    <label for="add">Pincode:</label>
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="pin" pattern="[0-9]{6}" maxlength="6" required>
+             </div>
+        </div>
+             <br>
+             <div class="row">
+                <div class="col-sm-3">
+                        <label for="dob">Select your gender:</label>
+                </div>
+                <div class="col-sm-3"> 
+                <div class="form-check">
+                        <input type="radio" class="form-check-input" name="optradio" required>Male
+                </div> 
+                </div>
+                <div class="col-sm-3">
+                <div class="form-check">                  
+                         <input type="radio" class="form-check-input" name="optradio" required>Female
+                        </label>
+                        </div>
+                        </div>
+                        <div class="col-sm-3">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                Select Account Type
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" >Saving</a>
+                                <a class="dropdown-item" >Current</a>
+                              </div>
+                        </button>
+             </div>
+        </div>
+        </div>
+             </div>
+
+        </div>
+
+  <button type="submit" class="btn btn-primary" style="margin-left:400px;margin-right:300px">Submit</button>
+</form>
+  </body>
+  </html>
