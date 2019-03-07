@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-# html-css assignment
-=======
+html-css assignment
 
->>>>>>> css-assignments
+
+css-assignments
 this repository contains bank app and pizza application UI  
